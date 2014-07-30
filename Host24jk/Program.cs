@@ -15,7 +15,7 @@ namespace Host24jk
             {
                 host.Open();
                 Console.WriteLine("host wystartował: " + DateTime.Now);
-                Console.ReadLine();
+                Console.ReadLine(); 
             }
 
         }
