@@ -12,8 +12,8 @@ namespace _24jk
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Service24" in both code and config file together.
     public class Service24 : IService24
-    {
-        public void UploadPicToDb(string imgUrl)
+    {     
+        public byte[] UploadPicToDb(string imgUrl)
         {
             var context = new Context();
 
@@ -24,10 +24,11 @@ namespace _24jk
 
             var pList = new PicList();
             pList.Title = "Lista Zdjęć";
-
             pList.Pics = new List<Pic> { pic };
+
             context.PicLists.Add(pList);
             context.SaveChanges();
+            return pic.File;
         }
     }
     
