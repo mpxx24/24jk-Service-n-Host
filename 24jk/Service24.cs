@@ -16,7 +16,7 @@ namespace _24jk
         {
             var context = new Context();
 
-            var pic = new DbFile()
+            var plik = new DbFile()
             {
                 File = File.ReadAllBytes(imgUrl),
                 FileName = fName,
@@ -24,10 +24,10 @@ namespace _24jk
                 FileSize = fNameSize
             };
 
-            context.DbFiles.Add(pic);
+            context.DbFiles.Add(plik);
             
             context.SaveChanges();
-            return pic.File;
+            return plik.File;
         }
     }
     
