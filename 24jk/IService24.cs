@@ -13,7 +13,7 @@ namespace _24jk
     public interface IService24
     {
         [OperationContract]
-        byte[] UploadPicToDb(string imgUrl);
+        byte[] UploadPicToDb(string imgUrl, string fName, string fNameExt, string fNameSize);
 
     }
 }

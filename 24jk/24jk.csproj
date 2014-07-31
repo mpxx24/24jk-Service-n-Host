@@ -52,7 +52,6 @@
     <Compile Include="Context.cs" />
     <Compile Include="IService24.cs" />
     <Compile Include="Pic.cs" />
-    <Compile Include="PicList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service24.cs" />
   </ItemGroup>

@@ -4,7 +4,6 @@ namespace _24jk
 {
     public class Context : DbContext
     {
-        public DbSet<Pic> Pics { get; set; }
-        public DbSet<PicList> PicLists { get; set; }
+        public DbSet<DbFile> DbFiles { get; set; }
     }
 }
