@@ -12,7 +12,7 @@ namespace _24jk
 {
     public class Service24 : IService24
     {     
-        public byte[] UploadPicToDb(string imgUrl, string fName, string fNameExt, string fNameSize)
+        public byte[] UploadPicToDb(string imgUrl, string fName, string fNameExt, int fNameSize)
         {
             var context = new Context();
 

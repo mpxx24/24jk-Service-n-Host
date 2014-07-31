@@ -5,7 +5,7 @@
         public int ID { get; set; }
         public string FileName { get; set; }
         public string FilenameExtension { get; set; }
-        public string FileSize { get; set; } //string?
+        public int FileSize { get; set; }
         public byte[] File { get; set; }
     }
 }
