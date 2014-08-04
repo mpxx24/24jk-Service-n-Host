@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -12,7 +13,7 @@ namespace _24jk
 {
     public class Service24 : IService24
     {     
-        public byte[] UploadPicToDb(string imgUrl, string fName, string fNameExt, int fNameSize)
+        public void UploadPicToDb(string imgUrl, string fName, string fNameExt, int fNameSize)
         {
             var context = new Context();
 
@@ -20,14 +21,14 @@ namespace _24jk
             {
                 File = File.ReadAllBytes(imgUrl),
                 FileName = fName,
-                FilenameExtension = fNameExt,
+                FileNameExtension = fNameExt,
+                AddeDateTime = DateTime.Now,
                 FileSize = fNameSize
             };
 
             context.DbFiles.Add(plik);
             
             context.SaveChanges();
-            return plik.File;
         }
     }
     
